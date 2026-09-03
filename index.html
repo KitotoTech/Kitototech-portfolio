@@ -158,7 +158,20 @@
             border: 1px solid var(--primary);
             color: white;
         }
+        /* WhatsApp Button */
+.whatsapp-btn {
+    background: #25D366;
+    color: white;
+    border: 1px solid #25D366;
+    box-shadow: 0 5px 15px rgba(37, 211, 102, 0.25);
+}
 
+.whatsapp-btn:hover {
+    background: #128C7E;
+    border-color: #128C7E;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+}
         .btn:hover {
             transform: translateY(-3px);
             box-shadow: 0 10px 25px rgba(0,198,255,.25);
@@ -594,15 +607,25 @@
                 organisations and brands build a strong digital presence.
             </p>
 
-            <div class="buttons">
-                <a href="#projects" class="btn btn-primary">
-                    View My Work
-                </a>
+           <div class="buttons">
 
-                <a href="#contact" class="btn btn-outline">
-                    Contact Me
-                </a>
-            </div>
+    <a href="#projects" class="btn btn-primary">
+        View My Work
+    </a>
+
+    <a href="#contact" class="btn btn-outline">
+        Contact Me
+    </a>
+
+    <a href="https://wa.me/255689464132"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="btn whatsapp-btn">
+        <span style="font-size: 20px;">☘</span>
+        WhatsApp Me
+    </a>
+
+</div>
         </div>
 
         <div class="hero-card">
@@ -903,12 +926,12 @@
 
                 <div class="contact-item">
                     <strong>📧 Email</strong>
-                    <span>your-email@example.com</span>
+                    <span>dmnyanyi3@gmail.com</span>
                 </div>
 
                 <div class="contact-item">
                     <strong>📞 Phone</strong>
-                    <span>+255 XXX XXX XXX</span>
+                    <span>+255 689 464 132</span>
                 </div>
 
                 <div class="contact-item">
@@ -1012,9 +1035,9 @@
 
         /*
          * BADILISHA NAMBA HAPA BAADAYE
-         * mfano: 2557XXXXXXXX
+         * mfano: 2557689464132
          */
-        const phoneNumber = "255700000000";
+        const phoneNumber = "255689464132";
 
         window.open(
             `https://wa.me/${phoneNumber}?text=${whatsappMessage}`,
