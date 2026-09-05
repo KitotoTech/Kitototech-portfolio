@@ -1,0 +1,1909 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="KitotoTech Creative Gallery - Graphic Design, Branding, Certificates, Posters and Digital Designs">
+
+    <title>Gallery | KitotoTech</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <style>
+
+        /* =========================
+           GENERAL
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            background: #f5f7fb;
+            color: #111827;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+
+        /* =========================
+           NAVBAR
+        ========================= */
+
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            width: 100%;
+
+            background: rgba(255,255,255,0.96);
+
+            backdrop-filter: blur(12px);
+
+            border-bottom: 1px solid #e5e7eb;
+
+            padding: 16px 6%;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: auto;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 27px;
+            font-weight: 800;
+            color: #111827;
+        }
+
+        .logo span {
+            color: #16a34a;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #374151;
+            font-size: 15px;
+            font-weight: 600;
+
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #16a34a;
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .gallery-hero {
+            min-height: 430px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+
+            padding: 80px 20px;
+
+            background:
+                radial-gradient(circle at top left,
+                rgba(34,197,94,0.20),
+                transparent 35%),
+
+                radial-gradient(circle at bottom right,
+                rgba(37,99,235,0.18),
+                transparent 35%),
+
+                #0b1220;
+
+            position: relative;
+
+            overflow: hidden;
+        }
+
+        .hero-content {
+            max-width: 850px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-small {
+            display: inline-block;
+
+            padding: 8px 18px;
+
+            border: 1px solid rgba(255,255,255,0.2);
+
+            border-radius: 50px;
+
+            color: #86efac;
+
+            font-size: 13px;
+            font-weight: 600;
+
+            margin-bottom: 20px;
+
+            background: rgba(255,255,255,0.05);
+        }
+
+        .gallery-hero h1 {
+            color: white;
+
+            font-size: clamp(40px, 7vw, 75px);
+
+            line-height: 1.05;
+
+            margin-bottom: 20px;
+
+            font-weight: 800;
+        }
+
+        .gallery-hero h1 span {
+            color: #22c55e;
+        }
+
+        .gallery-hero p {
+            color: #cbd5e1;
+
+            max-width: 700px;
+
+            margin: auto;
+
+            font-size: 16px;
+
+            line-height: 1.8;
+        }
+
+
+        /* =========================
+           GALLERY SECTION
+        ========================= */
+
+        .gallery-section {
+            max-width: 1250px;
+
+            margin: auto;
+
+            padding: 80px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+
+            margin-bottom: 45px;
+        }
+
+        .section-title h2 {
+            font-size: 38px;
+
+            color: #111827;
+
+            margin-bottom: 10px;
+        }
+
+        .section-title h2 span {
+            color: #16a34a;
+        }
+
+        .section-title p {
+            color: #6b7280;
+        }
+
+
+        /* =========================
+           FILTER BUTTONS
+        ========================= */
+
+        .filters {
+            display: flex;
+
+            justify-content: center;
+
+            flex-wrap: wrap;
+
+            gap: 10px;
+
+            margin-bottom: 45px;
+        }
+
+        .filter-btn {
+            border: none;
+
+            padding: 11px 20px;
+
+            border-radius: 50px;
+
+            background: white;
+
+            color: #374151;
+
+            font-family: inherit;
+
+            font-size: 14px;
+
+            font-weight: 600;
+
+            cursor: pointer;
+
+            box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+
+            transition: 0.3s;
+        }
+
+        .filter-btn:hover {
+            transform: translateY(-2px);
+
+            color: #16a34a;
+        }
+
+        .filter-btn.active {
+            background: #16a34a;
+
+            color: white;
+
+            box-shadow:
+                0 8px 25px rgba(22,163,74,0.25);
+        }
+
+
+        /* =========================
+           GALLERY GRID
+        ========================= */
+
+        .gallery-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 25px;
+        }
+
+        .gallery-item {
+            position: relative;
+
+            height: 330px;
+
+            border-radius: 18px;
+
+            overflow: hidden;
+
+            background: #e5e7eb;
+
+            cursor: pointer;
+
+            box-shadow:
+                0 10px 35px rgba(0,0,0,0.08);
+
+            animation: galleryAppear 0.6s ease;
+        }
+
+        @keyframes galleryAppear {
+
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        }
+
+        .gallery-item img {
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+            display: block;
+
+            transition:
+                transform 0.6s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.08);
+        }
+
+
+        /* =========================
+           IMAGE OVERLAY
+        ========================= */
+
+        .gallery-overlay {
+            position: absolute;
+
+            inset: 0;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: flex-end;
+
+            padding: 25px;
+
+            background:
+                linear-gradient(
+                    to top,
+                    rgba(0,0,0,0.85),
+                    rgba(0,0,0,0.05)
+                );
+
+            opacity: 0;
+
+            transition: 0.4s;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-overlay h3 {
+            color: white;
+
+            font-size: 19px;
+
+            margin-bottom: 5px;
+        }
+
+        .gallery-overlay p {
+            color: #d1d5db;
+
+            font-size: 13px;
+        }
+
+        .view-icon {
+            position: absolute;
+
+            top: 20px;
+
+            right: 20px;
+
+            width: 45px;
+
+            height: 45px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background: rgba(255,255,255,0.95);
+
+            color: #16a34a;
+
+            font-size: 20px;
+        }
+
+
+        /* =========================
+           SLIDESHOW
+        ========================= */
+
+        .slider-section {
+            max-width: 1200px;
+
+            margin: 0 auto 80px;
+
+            padding: 0 20px;
+        }
+
+        .slider {
+            position: relative;
+
+            width: 100%;
+
+            height: 520px;
+
+            border-radius: 25px;
+
+            overflow: hidden;
+
+            background: #111827;
+
+            box-shadow:
+                0 20px 60px rgba(0,0,0,0.18);
+        }
+
+        .slide {
+            position: absolute;
+
+            inset: 0;
+
+            opacity: 0;
+
+            transition:
+                opacity 1s ease,
+                transform 1s ease;
+
+            transform: scale(1.04);
+        }
+
+        .slide.active {
+            opacity: 1;
+
+            transform: scale(1);
+        }
+
+        .slide img {
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: contain;
+
+            background: #111827;
+        }
+
+        .slide-caption {
+            position: absolute;
+
+            left: 0;
+
+            right: 0;
+
+            bottom: 0;
+
+            padding: 35px;
+
+            color: white;
+
+            background:
+                linear-gradient(
+                    transparent,
+                    rgba(0,0,0,0.9)
+                );
+        }
+
+        .slide-caption h3 {
+            font-size: 25px;
+
+            margin-bottom: 5px;
+        }
+
+        .slide-caption p {
+            color: #d1d5db;
+
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           SLIDER ARROWS
+        ========================= */
+
+        .slider-btn {
+            position: absolute;
+
+            top: 50%;
+
+            transform: translateY(-50%);
+
+            z-index: 10;
+
+            width: 50px;
+
+            height: 50px;
+
+            border: none;
+
+            border-radius: 50%;
+
+            background: rgba(255,255,255,0.9);
+
+            color: #111827;
+
+            font-size: 25px;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+        }
+
+        .slider-btn:hover {
+            background: #16a34a;
+
+            color: white;
+
+            transform:
+                translateY(-50%) scale(1.08);
+        }
+
+        .prev {
+            left: 20px;
+        }
+
+        .next {
+            right: 20px;
+        }
+
+
+        /* =========================
+           SLIDER DOTS
+        ========================= */
+
+        .slider-dots {
+            position: absolute;
+
+            bottom: 18px;
+
+            left: 50%;
+
+            transform: translateX(-50%);
+
+            z-index: 20;
+
+            display: flex;
+
+            gap: 7px;
+        }
+
+        .dot {
+            width: 9px;
+
+            height: 9px;
+
+            border-radius: 50%;
+
+            border: none;
+
+            background: rgba(255,255,255,0.5);
+
+            cursor: pointer;
+
+            transition: 0.3s;
+        }
+
+        .dot.active {
+            width: 25px;
+
+            border-radius: 20px;
+
+            background: #22c55e;
+        }
+
+
+        /* =========================
+           LIGHTBOX
+        ========================= */
+
+        .lightbox {
+            position: fixed;
+
+            inset: 0;
+
+            z-index: 2000;
+
+            display: none;
+
+            align-items: center;
+
+            justify-content: center;
+
+            padding: 30px;
+
+            background:
+                rgba(0,0,0,0.92);
+        }
+
+        .lightbox.show {
+            display: flex;
+        }
+
+        .lightbox img {
+            max-width: 92vw;
+
+            max-height: 88vh;
+
+            object-fit: contain;
+
+            border-radius: 10px;
+
+            box-shadow:
+                0 20px 80px rgba(0,0,0,0.5);
+
+            animation: zoomImage 0.35s ease;
+        }
+
+        @keyframes zoomImage {
+
+            from {
+                opacity: 0;
+                transform: scale(0.85);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+        }
+
+        .close-lightbox {
+            position: absolute;
+
+            top: 25px;
+
+            right: 30px;
+
+            width: 50px;
+
+            height: 50px;
+
+            border: none;
+
+            border-radius: 50%;
+
+            background: white;
+
+            color: #111827;
+
+            font-size: 25px;
+
+            cursor: pointer;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #0b1220;
+
+            color: #cbd5e1;
+
+            text-align: center;
+
+            padding: 35px 20px;
+        }
+
+        footer strong {
+            color: #22c55e;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 900px) {
+
+            .gallery-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .slider {
+                height: 430px;
+            }
+
+        }
+
+
+        @media (max-width: 650px) {
+
+            .navbar {
+                padding: 14px 20px;
+            }
+
+            .nav-container {
+                flex-direction: column;
+
+                gap: 12px;
+            }
+
+            .nav-links {
+                gap: 14px;
+
+                flex-wrap: wrap;
+
+                justify-content: center;
+            }
+
+            .nav-links a {
+                font-size: 12px;
+            }
+
+            .gallery-hero {
+                min-height: 370px;
+
+                padding: 60px 20px;
+            }
+
+            .gallery-hero h1 {
+                font-size: 42px;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-item {
+                height: 300px;
+            }
+
+            .slider {
+                height: 330px;
+
+                border-radius: 15px;
+            }
+
+            .slide-caption {
+                padding: 20px;
+            }
+
+            .slide-caption h3 {
+                font-size: 19px;
+            }
+
+            .slider-btn {
+                width: 42px;
+
+                height: 42px;
+
+                font-size: 20px;
+            }
+
+            .prev {
+                left: 10px;
+            }
+
+            .next {
+                right: 10px;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     NAVBAR
+========================= -->
+
+<nav class="navbar">
+
+    <div class="nav-container">
+
+        <a href="index.html" class="logo">
+            Kitoto<span>Tech</span>
+        </a>
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+
+            <li>
+                <a href="index.html#about">About</a>
+            </li>
+
+            <li>
+                <a href="index.html#services">Services</a>
+            </li>
+
+            <li>
+                <a href="index.html#skills">Skills</a>
+            </li>
+
+            <li>
+                <a href="index.html#projects">Projects</a>
+            </li>
+
+            <li>
+                <a href="gallery.html" class="active">
+                    Gallery
+                </a>
+            </li>
+
+            <li>
+                <a href="index.html#contact">
+                    Contact
+                </a>
+            </li>
+
+        </ul>
+
+    </div>
+
+</nav>
+
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="gallery-hero">
+
+    <div class="hero-content">
+
+        <span class="hero-small">
+            KITOTOTECH CREATIVE WORKS
+        </span>
+
+        <h1>
+            My Creative <span>Gallery</span>
+        </h1>
+
+        <p>
+            Explore selected graphic designs, certificates,
+            branding projects, posters, logos and creative
+            digital works designed by KitotoTech.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     SLIDESHOW
+========================= -->
+
+<section class="slider-section">
+
+    <div class="slider">
+
+        <!-- SLIDE 1 -->
+
+        <div class="slide active">
+
+            <img src="images/gallery1.jpg"
+                 alt="Government Design">
+
+            <div class="slide-caption">
+
+                <h3>
+                    Government & Institutional Design
+                </h3>
+
+                <p>
+                    Professional institutional graphic design
+                    and official document layouts.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- SLIDE 2 -->
+
+        <div class="slide">
+
+            <img src="images/gallery2.jpg"
+                 alt="PCCB Design">
+
+            <div class="slide-caption">
+
+                <h3>
+                    Certificate & Official Design
+                </h3>
+
+                <p>
+                    Clean and professional certificate designs.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- SLIDE 3 -->
+
+        <div class="slide">
+
+            <img src="images/gallery3.jpg"
+                 alt="Anti Corruption Poster">
+
+            <div class="slide-caption">
+
+                <h3>
+                    Poster Design
+                </h3>
+
+                <p>
+                    Creative awareness and communication posters.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- SLIDE 4 -->
+
+        <div class="slide">
+
+            <img src="images/gallery4.jpg"
+                 alt="Certificate Design">
+
+            <div class="slide-caption">
+
+                <h3>
+                    Certificate Design
+                </h3>
+
+                <p>
+                    Modern certificate and appreciation designs.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- SLIDE 5 -->
+
+        <div class="slide">
+
+            <img src="images/gallery5.jpg"
+                 alt="Professional Card">
+
+            <div class="slide-caption">
+
+                <h3>
+                    Business Card Design
+                </h3>
+
+                <p>
+                    Professional personal and business identity.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- SLIDE 6 -->
+
+        <div class="slide">
+
+            <img src="images/gallery6.jpg"
+                 alt="Book Cover">
+
+            <div class="slide-caption">
+
+                <h3>
+                    Book Cover Design
+                </h3>
+
+                <p>
+                    Creative publication and book cover design.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- SLIDE 7 -->
+
+        <div class="slide">
+
+            <img src="images/gallery7.jpg"
+                 alt="Anti Corruption Certificate">
+
+            <div class="slide-caption">
+
+                <h3>
+                    Institutional Branding
+                </h3>
+
+                <p>
+                    Professional organizational branding materials.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- SLIDE 8 -->
+
+        <div class="slide">
+
+            <img src="images/gallery8.jpg"
+                 alt="KAX Cyber Consulting">
+
+            <div class="slide-caption">
+
+                <h3>
+                    Logo Design
+                </h3>
+
+                <p>
+                    Modern business logo and brand identity.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- SLIDE 9 -->
+
+        <div class="slide">
+
+            <img src="images/gallery9.jpg"
+                 alt="Cyber Consulting">
+
+            <div class="slide-caption">
+
+                <h3>
+                    Business Branding
+                </h3>
+
+                <p>
+                    Corporate visual identity and branding.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- SLIDE 10 -->
+
+        <div class="slide">
+
+            <img src="images/gallery10.jpg"
+                 alt="Business Card">
+
+            <div class="slide-caption">
+
+                <h3>
+                    Creative Business Card
+                </h3>
+
+                <p>
+                    Attractive professional business identity.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- SLIDE 11 -->
+
+        <div class="slide">
+
+            <img src="images/gallery11.jpg"
+                 alt="Product Advertisement">
+
+            <div class="slide-caption">
+
+                <h3>
+                    Product Advertisement
+                </h3>
+
+                <p>
+                    Product marketing and promotional graphic design.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- SLIDE 12 -->
+
+        <div class="slide">
+
+            <img src="images/gallery12.jpg"
+                 alt="Product Poster">
+
+            <div class="slide-caption">
+
+                <h3>
+                    Commercial Graphic Design
+                </h3>
+
+                <p>
+                    Creative promotional designs for businesses.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ARROWS -->
+
+        <button class="slider-btn prev"
+                onclick="changeSlide(-1)">
+            &#10094;
+        </button>
+
+        <button class="slider-btn next"
+                onclick="changeSlide(1)">
+            &#10095;
+        </button>
+
+
+        <!-- DOTS -->
+
+        <div class="slider-dots">
+
+            <button class="dot active"
+                    onclick="goToSlide(0)">
+            </button>
+
+            <button class="dot"
+                    onclick="goToSlide(1)">
+            </button>
+
+            <button class="dot"
+                    onclick="goToSlide(2)">
+            </button>
+
+            <button class="dot"
+                    onclick="goToSlide(3)">
+            </button>
+
+            <button class="dot"
+                    onclick="goToSlide(4)">
+            </button>
+
+            <button class="dot"
+                    onclick="goToSlide(5)">
+            </button>
+
+            <button class="dot"
+                    onclick="goToSlide(6)">
+            </button>
+
+            <button class="dot"
+                    onclick="goToSlide(7)">
+            </button>
+
+            <button class="dot"
+                    onclick="goToSlide(8)">
+            </button>
+
+            <button class="dot"
+                    onclick="goToSlide(9)">
+            </button>
+
+            <button class="dot"
+                    onclick="goToSlide(10)">
+            </button>
+
+            <button class="dot"
+                    onclick="goToSlide(11)">
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     GALLERY
+========================= -->
+
+<section class="gallery-section">
+
+    <div class="section-title">
+
+        <h2>
+            Creative <span>Works</span>
+        </h2>
+
+        <p>
+            A collection of selected KitotoTech designs
+        </p>
+
+    </div>
+
+
+    <!-- FILTERS -->
+
+    <div class="filters">
+
+        <button class="filter-btn active"
+                data-filter="all">
+            All
+        </button>
+
+        <button class="filter-btn"
+                data-filter="certificate">
+            Certificates
+        </button>
+
+        <button class="filter-btn"
+                data-filter="branding">
+            Branding
+        </button>
+
+        <button class="filter-btn"
+                data-filter="poster">
+            Posters
+        </button>
+
+        <button class="filter-btn"
+                data-filter="logo">
+            Logos
+        </button>
+
+        <button class="filter-btn"
+                data-filter="advert">
+            Advertisements
+        </button>
+
+    </div>
+
+
+
+    <!-- GALLERY GRID -->
+
+    <div class="gallery-grid">
+
+
+        <!-- 1 -->
+
+        <div class="gallery-item"
+             data-category="certificate"
+             onclick="openLightbox('images/gallery1.jpg')">
+
+            <img src="images/gallery1.jpg"
+                 alt="Government Design">
+
+            <div class="gallery-overlay">
+
+                <div class="view-icon">
+                    +
+                </div>
+
+                <h3>
+                    Government Design
+                </h3>
+
+                <p>
+                    Official institutional design
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- 2 -->
+
+        <div class="gallery-item"
+             data-category="certificate"
+             onclick="openLightbox('images/gallery2.jpg')">
+
+            <img src="images/gallery2.jpg"
+                 alt="PCCB Certificate">
+
+            <div class="gallery-overlay">
+
+                <div class="view-icon">
+                    +
+                </div>
+
+                <h3>
+                    Certificate Design
+                </h3>
+
+                <p>
+                    Professional certificate
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- 3 -->
+
+        <div class="gallery-item"
+             data-category="poster"
+             onclick="openLightbox('images/gallery3.jpg')">
+
+            <img src="images/gallery3.jpg"
+                 alt="Anti Corruption Poster">
+
+            <div class="gallery-overlay">
+
+                <div class="view-icon">
+                    +
+                </div>
+
+                <h3>
+                    Awareness Poster
+                </h3>
+
+                <p>
+                    Campaign graphic design
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- 4 -->
+
+        <div class="gallery-item"
+             data-category="certificate"
+             onclick="openLightbox('images/gallery4.jpg')">
+
+            <img src="images/gallery4.jpg"
+                 alt="Certificate">
+
+            <div class="gallery-overlay">
+
+                <div class="view-icon">
+                    +
+                </div>
+
+                <h3>
+                    Appreciation Certificate
+                </h3>
+
+                <p>
+                    Professional certificate design
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- 5 -->
+
+        <div class="gallery-item"
+             data-category="branding"
+             onclick="openLightbox('images/gallery5.jpg')">
+
+            <img src="images/gallery5.jpg"
+                 alt="Business Branding">
+
+            <div class="gallery-overlay">
+
+                <div class="view-icon">
+                    +
+                </div>
+
+                <h3>
+                    Business Branding
+                </h3>
+
+                <p>
+                    Personal brand identity
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- 6 -->
+
+        <div class="gallery-item"
+             data-category="poster"
+             onclick="openLightbox('images/gallery6.jpg')">
+
+            <img src="images/gallery6.jpg"
+                 alt="Book Cover">
+
+            <div class="gallery-overlay">
+
+                <div class="view-icon">
+                    +
+                </div>
+
+                <h3>
+                    Book Cover
+                </h3>
+
+                <p>
+                    Publication design
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- 7 -->
+
+        <div class="gallery-item"
+             data-category="certificate"
+             onclick="openLightbox('images/gallery7.jpg')">
+
+            <img src="images/gallery7.jpg"
+                 alt="University Certificate">
+
+            <div class="gallery-overlay">
+
+                <div class="view-icon">
+                    +
+                </div>
+
+                <h3>
+                    University Certificate
+                </h3>
+
+                <p>
+                    Institutional design
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- 8 -->
+
+        <div class="gallery-item"
+             data-category="logo"
+             onclick="openLightbox('images/gallery8.jpg')">
+
+            <img src="images/gallery8.jpg"
+                 alt="KAX Cyber Consulting Logo">
+
+            <div class="gallery-overlay">
+
+                <div class="view-icon">
+                    +
+                </div>
+
+                <h3>
+                    KAX Cyber Consulting
+                </h3>
+
+                <p>
+                    Logo design
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- 9 -->
+
+        <div class="gallery-item"
+             data-category="branding"
+             onclick="openLightbox('images/gallery9.jpg')">
+
+            <img src="images/gallery9.jpg"
+                 alt="Cyber Consulting">
+
+            <div class="gallery-overlay">
+
+                <div class="view-icon">
+                    +
+                </div>
+
+                <h3>
+                    Corporate Branding
+                </h3>
+
+                <p>
+                    Brand identity design
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- 10 -->
+
+        <div class="gallery-item"
+             data-category="branding"
+             onclick="openLightbox('images/gallery10.jpg')">
+
+            <img src="images/gallery10.jpg"
+                 alt="Business Card">
+
+            <div class="gallery-overlay">
+
+                <div class="view-icon">
+                    +
+                </div>
+
+                <h3>
+                    Business Card
+                </h3>
+
+                <p>
+                    Professional identity
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- 11 -->
+
+        <div class="gallery-item"
+             data-category="advert"
+             onclick="openLightbox('images/gallery11.jpg')">
+
+            <img src="images/gallery11.jpg"
+                 alt="Liquid Soap Advertisement">
+
+            <div class="gallery-overlay">
+
+                <div class="view-icon">
+                    +
+                </div>
+
+                <h3>
+                    Product Advertisement
+                </h3>
+
+                <p>
+                    Commercial design
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- 12 -->
+
+        <div class="gallery-item"
+             data-category="advert"
+             onclick="openLightbox('images/gallery12.jpg')">
+
+            <img src="images/gallery12.jpg"
+                 alt="Product Advertisement">
+
+            <div class="gallery-overlay">
+
+                <div class="view-icon">
+                    +
+                </div>
+
+                <h3>
+                    Product Promotion
+                </h3>
+
+                <p>
+                    Marketing graphic design
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     LIGHTBOX
+========================= -->
+
+<div class="lightbox" id="lightbox">
+
+    <button class="close-lightbox"
+            onclick="closeLightbox()">
+        &times;
+    </button>
+
+    <img id="lightboxImage"
+         src=""
+         alt="Gallery Preview">
+
+</div>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <p>
+        © 2026
+        <strong>KitotoTech</strong>.
+        All Rights Reserved.
+    </p>
+
+</footer>
+
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script>
+
+    /* =========================
+       SLIDESHOW
+    ========================= */
+
+    let currentSlide = 0;
+
+    const slides =
+        document.querySelectorAll(".slide");
+
+    const dots =
+        document.querySelectorAll(".dot");
+
+
+    function showSlide(index) {
+
+        if (index >= slides.length) {
+            currentSlide = 0;
+        }
+
+        else if (index < 0) {
+            currentSlide = slides.length - 1;
+        }
+
+        else {
+            currentSlide = index;
+        }
+
+
+        slides.forEach((slide) => {
+            slide.classList.remove("active");
+        });
+
+
+        dots.forEach((dot) => {
+            dot.classList.remove("active");
+        });
+
+
+        slides[currentSlide]
+            .classList.add("active");
+
+
+        dots[currentSlide]
+            .classList.add("active");
+
+    }
+
+
+    function changeSlide(direction) {
+
+        currentSlide += direction;
+
+        showSlide(currentSlide);
+
+        resetAutoSlide();
+
+    }
+
+
+    function goToSlide(index) {
+
+        currentSlide = index;
+
+        showSlide(currentSlide);
+
+        resetAutoSlide();
+
+    }
+
+
+    /* =========================
+       AUTO SLIDESHOW
+    ========================= */
+
+    let autoSlide =
+        setInterval(() => {
+
+            currentSlide++;
+
+            showSlide(currentSlide);
+
+        }, 5000);
+
+
+    function resetAutoSlide() {
+
+        clearInterval(autoSlide);
+
+        autoSlide =
+            setInterval(() => {
+
+                currentSlide++;
+
+                showSlide(currentSlide);
+
+            }, 5000);
+
+    }
+
+
+
+    /* =========================
+       GALLERY FILTER
+    ========================= */
+
+    const filterButtons =
+        document.querySelectorAll(".filter-btn");
+
+    const galleryItems =
+        document.querySelectorAll(".gallery-item");
+
+
+    filterButtons.forEach(button => {
+
+        button.addEventListener("click", () => {
+
+            filterButtons.forEach(btn => {
+                btn.classList.remove("active");
+            });
+
+            button.classList.add("active");
+
+
+            const filter =
+                button.getAttribute("data-filter");
+
+
+            galleryItems.forEach(item => {
+
+                const category =
+                    item.getAttribute("data-category");
+
+
+                if (
+                    filter === "all" ||
+                    category === filter
+                ) {
+
+                    item.style.display = "block";
+
+                }
+
+                else {
+
+                    item.style.display = "none";
+
+                }
+
+            });
+
+        });
+
+    });
+
+
+
+    /* =========================
+       LIGHTBOX
+    ========================= */
+
+    const lightbox =
+        document.getElementById("lightbox");
+
+    const lightboxImage =
+        document.getElementById("lightboxImage");
+
+
+    function openLightbox(image) {
+
+        lightboxImage.src = image;
+
+        lightbox.classList.add("show");
+
+        document.body.style.overflow = "hidden";
+
+    }
+
+
+    function closeLightbox() {
+
+        lightbox.classList.remove("show");
+
+        document.body.style.overflow = "";
+
+    }
+
+
+    /* Close when clicking outside image */
+
+    lightbox.addEventListener("click", function(event) {
+
+        if (event.target === lightbox) {
+
+            closeLightbox();
+
+        }
+
+    });
+
+
+    /* ESC key */
+
+    document.addEventListener("keydown", function(event) {
+
+        if (event.key === "Escape") {
+
+            closeLightbox();
+
+        }
+
+    });
+
+
+</script>
+
+
+</body>
+</html>
